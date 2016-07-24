@@ -1,0 +1,29 @@
+sudo apt-get install build-essential automake libtool bison subversion pkg-config
+sudo apt-get install libxml2-dev libxslt-dev autoconf libc6-dev ncurses-dev libpcre3 libpcre3-dev
+sudo apt-get install openssl libreadline6 libreadline6-dev curl git-core zlib1g zlib1g-dev libssl-dev libyaml-dev libsqlite3-dev sqlite3
+sudo apt-get install libnet1 libnet1-dev
+sudo apt-get install libpcap-dev libpcap0.8 libpcap0.8-dev
+sudo apt-get install libcap-ng-dev
+sudo apt-get install coccinelle
+sudo apt-get install libcap-ng-dev
+sudo apt-get install magic libmagic-dev
+sudo apt-get install file
+sudo apt-get install libjansson4 libjansson-dev python-simplejson
+
+
+wget http://www.openinfosecfoundation.org/download/suricata-2.0.4.tar.gz
+tar zxvf suricata-2.0.4.tar.gz
+cd suricata-2.0.4
+
+
+cd suricata-2.0.4
+./configure --prefix=/opt/suricata --sysconfdir=/opt/suricata/etc --localstatedir=/var
+make
+sudo make install-full   
+   
+sudo ethtool -k eth0
+sudo ethtool -K eth0 tx off rx off sg off gso off gro off
+
+# start suricata:
+sudo /opt/suricata/bin/suricata -c /opt/suricata/etc/suricata/suricata.yaml --af-packet=eth0
+
