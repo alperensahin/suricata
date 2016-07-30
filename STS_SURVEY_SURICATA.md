@@ -219,6 +219,8 @@ Suricata’ya yeni bir imza eklemek için aşağıdaki işlemler yapılmalıdır
 
 Uygulama imza tabanlı olduğu için imzaların sürekli güncellenmesi gerekmektedir. Bunu otomatik sağlayacak olan OinkMaster yada PulledPork uygulamalarının konfigürasyonu incelenebilir. Ayrıca imza sayısı ve network trafiği ile doğru orantılı olarak log kayıtlarının da HDD de fazla yer tutmaması için logrotate yazılımı konfigüre edilebilir.
 
+İhtiyaç durumuna göre bazı imzaların kapatılıp açılması gerekebilir. Bu durumda imzaların ve üretilen log kayıtlarının formatlarının bilinmesi gerekir. Log kayıtları bahsedilen kurulum senaryosuna göre /var/log/suricata/ adresinde bulunabilir. http.log, dns.log, fast.log gibi log kayıtları buradan incelenebilir.
+
 ### BRO
 Bro açık kaynak kodlu, UNIX tabanlı, BSD lisansı ile dağıtılan saldırı tespit sistemi, ağ analiz ve izleme aracıdır. İlk olarak Lawrence Berkeley National Laboratory (LBNL)’de araştırmacı olan Vern Paxson tarafından 1995 yılında kodlanmaya başlanmıştır. 1996 yılında işlevsel olarak geliştirilmeye başlanmış ve 1998 yılında yayınlanan bir makale ile duyurulmuştur. 2003 yılına gelindiğinde National Science Foundation (NSF) tarafından proje desteklenmeye başlanmış ve günümüzde de Berkeley’deki International Computer Science Institute (ICSI)’de geliştirilmeye devam edilmektedir [12]. 
 
